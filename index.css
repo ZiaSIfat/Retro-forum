@@ -1,0 +1,7 @@
+.body{
+    background-color: white;
+}
+.banner{
+    background-image: url('images/bgbanner.png');
+    background-size: cover;
+}
