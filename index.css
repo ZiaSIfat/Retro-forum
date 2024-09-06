@@ -4,4 +4,5 @@
 .banner{
     background-image: url('images/bgbanner.png');
     background-size: cover;
+    border-radius: 50px;
 }
