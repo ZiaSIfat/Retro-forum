@@ -12,6 +12,7 @@ const displayposts = (allPosts) => {
 
     
     const postSection = document.getElementById('post-section');
+    const sectionDiv = document.getElementById('section-div');
     for (const post of allPosts){
         console.log(post);
         const postCard = document.createElement('div');
@@ -63,9 +64,12 @@ const displayposts = (allPosts) => {
         
         `
 
-        postCard.querySelector('.mark-btn').addEventListener('click',()=> markPost(post));
+        
 
-         postSection.appendChild(postCard);
+        postCard.querySelector('.mark-btn').addEventListener('click',()=> markPost(post));
+        
+        sectionDiv.appendChild(postCard);
+         
        
     
     }
@@ -76,6 +80,8 @@ const displayposts = (allPosts) => {
 const markPost = (post) =>{
     // console.log('marked',post);
     const postSection = document.getElementById('post-section');
+    const markedDiv = document.getElementById('marked-div');
+
     const markedPost = document.createElement('div');
     markedPost.classList = 'bg-gray-300 p-5 rounded-3xl';
     markedPost.innerHTML = `
@@ -94,7 +100,7 @@ const markPost = (post) =>{
 </div>
       
     `
-    postSection.appendChild(markedPost);
+    markedDiv.appendChild(markedPost);
     
 
 }
