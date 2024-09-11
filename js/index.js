@@ -77,6 +77,8 @@ const displayposts = (allPosts) => {
     
 }
 
+let readCounter = 0;
+
 const markPost = (post) =>{
     // console.log('marked',post);
     
@@ -86,7 +88,7 @@ const markPost = (post) =>{
     const markedPost = document.createElement('div');
     markedPost.classList = ' mt-7';
     markedPost.innerHTML = `
-<div class="flex justify-around bg-gray-100 px-3 py-5 rounded-2xl">
+<div class="flex justify-around bg-gray-100 shadow-md shadow-white px-3 py-5 rounded-xl">
     <p>${post.title}</p>
     <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
         <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
@@ -97,12 +99,12 @@ const markPost = (post) =>{
 </div>
       
     `
+   
+
     markedDiv.appendChild(markedPost);
-    if(markedDiv.contains(markedPost)){
-        console.log('ok');
-        const marked = document.getElementById('marked');
-        
-    }
+    readCounter++;
+    document.getElementById('counter').textContent = `Marked as Read(${readCounter})`
+    
     
 
     
