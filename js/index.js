@@ -79,17 +79,14 @@ const displayposts = (allPosts) => {
 
 const markPost = (post) =>{
     // console.log('marked',post);
+    
     const postSection = document.getElementById('post-section');
     const markedDiv = document.getElementById('marked-div');
 
     const markedPost = document.createElement('div');
-    markedPost.classList = 'bg-gray-300 p-5 rounded-3xl';
+    markedPost.classList = ' mt-7';
     markedPost.innerHTML = `
-    <div class="flex justify-between mb-3">
-    <h1>Title</h1>
-    <p>Mark as Read</p>
-</div>
-<div class="flex justify-around bg-gray-100 px-3 py-2 rounded-2xl">
+<div class="flex justify-around bg-gray-100 px-3 py-5 rounded-2xl">
     <p>${post.title}</p>
     <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
         <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
@@ -101,6 +98,13 @@ const markPost = (post) =>{
       
     `
     markedDiv.appendChild(markedPost);
+    if(markedDiv.contains(markedPost)){
+        console.log('ok');
+        const marked = document.getElementById('marked');
+        
+    }
+    
+
     
 
 }
