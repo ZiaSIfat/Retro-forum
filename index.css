@@ -10,3 +10,24 @@
     background-size: cover;
     border-radius: 50px;
 }
+.profile-container{
+    position: absolute;
+    display: inline-block;
+}
+.status-indicator{
+    position: relative;
+    top: px;
+    bottom: 50px;
+    left: 30px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.active{
+    background-color: green;
+}
+.inactive{
+    background-color: red;
+}

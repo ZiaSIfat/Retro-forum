@@ -9,19 +9,20 @@ function loadPosts(){
 
 const displayposts = (allPosts) => {
     
-
+    
     
     const postSection = document.getElementById('post-section');
     const sectionDiv = document.getElementById('section-div');
     for (const post of allPosts){
-        console.log(post);
+        // console.log(post);
         const postCard = document.createElement('div');
         postCard.classList = 'flex gap-5 bg-gray-300 p-7 rounded-3xl mb-8';
         postCard.innerHTML = `
         
         
-        <div class="w-10 h-8 bg-white mt-2">
-                    
+        <div id="profile-container" class="w-10 h-8  mt-2">
+        <img src=${post.image} alt="">  
+        <div class='status-indicator inactive' id='status-div'></div>  
          </div>
          <div class="flex-1"> 
                     <div class="flex gap-8 mb-3">
@@ -68,14 +69,22 @@ const displayposts = (allPosts) => {
 
         postCard.querySelector('.mark-btn').addEventListener('click',()=> markPost(post));
         
+       
         sectionDiv.appendChild(postCard);
+        setStatus(post,postCard);
+
+        
+        
          
        
     
     }
+  
    
     
 }
+
+
 
 let readCounter = 0;
 
@@ -111,6 +120,22 @@ const markPost = (post) =>{
 
 }
 
+
+const setStatus = (post,postCard) =>{
+    console.log(post);
+    const statusDiv = postCard.querySelector('.status-indicator');
+        console.log(statusDiv);
+        
+        if(post.isActive){
+            statusDiv.classList.remove('inactive')
+            statusDiv.classList.add('active');
+
+        }
+        else{
+            statusDiv.classList.add('inactive')
+            statusDiv.classList.remove('active')
+        }
+}
 
 
 loadPosts();
