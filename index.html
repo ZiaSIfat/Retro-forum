@@ -12,9 +12,12 @@
     <script src="https://kit.fontawesome.com/36ff65487e.js" crossorigin="anonymous"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="index.css">
+<!-- IONICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
-<body class=" mx-24 my-10 text-black ">
-    <header>
+<body class=" mt-10 text-black ">
+    <header class="mx-24">
         <nav>
             <div class="navbar bg-base-100">
                 <div class="flex-1">
@@ -57,7 +60,7 @@
         </nav>
     </header>
 
-    <main>
+    <main class="mx-24">
         <section>
             <div class="md:flex lg:flex md:gap-20 lg:gap-20 banner p-24 ">
                 <div class="">
@@ -118,12 +121,26 @@
             <p>Yes, you can run unit tests and view the results directly within the app. </p>
             <p>The integrated testing features allow for a streamlined .</p>
         </section>
-        <section>
-            <div id="latest-div">
+        <section class="mb-10">
+            <div class="lg:grid gap-7 grid-cols-3"  id="latest-div">
                
             </div>
         </section>
     </main>
+
+    <footer class="bg-gray-300 text-center p-20">
+        <h1 class="text-4xl font-bold mb-9">ReTro</h1>
+        <p class="mb-5">Contary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature form 45 BC</p>
+        <div class="mb-8">
+            <ion-icon class="mr-4" name="logo-github"></ion-icon>
+            <ion-icon class="mr-4" name="logo-twitter"></ion-icon>
+            <ion-icon class="mr-4" name="logo-facebook"></ion-icon>
+            <ion-icon name="logo-instagram"></ion-icon>
+            
+        </div>
+        <hr>
+        <p class="mt-3">2017.All Rights Reserved</p>
+    </footer>
 
     <script src="js/index.js"></script>
 </body>

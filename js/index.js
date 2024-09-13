@@ -163,7 +163,7 @@ const displayLatest = (posts) => {
 
         const latestDiv = document.getElementById('latest-div');
         const latestPost = document.createElement('div');
-        latestPost.classList = 'card card-compact w-96 shadow-xl bg-white mt-7';
+        latestPost.classList = 'card card-compact  shadow-xl bg-white mt-7';
         latestPost.innerHTML = `
         <figure>
         <img
